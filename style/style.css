@@ -25,23 +25,35 @@ footer {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   font-size: 24px;
   font-weight: lighter;
   padding: 0 10px;
   box-sizing: border-box;
   direction: rtl; /* RTL layout */
 }
-
-.cart-icons {
-  width: 35px;
-  height: 35px;
-  margin-left: 15px; /* Adjust spacing between the icon and menu */
+.icon-links {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between registration link and cart icon */
+  margin-right: auto;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 20px; /* Space between menu items */
+.registrationform {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.registrationform:hover {
+  color: #ccc; /* Hover effect for registration link */
+}
+
+.cart-icons {
+  width: 30px;
+  height: 30px;
 }
 
 main {
@@ -53,7 +65,8 @@ main {
 }
 
 .logo {
-  width: 220px;
+  width: 60px;
+  margin-left: 20px;
 }
 
 .hero-banner {
@@ -64,58 +77,67 @@ main {
   border-radius: 8px; /* Rounds the corners */
   line-height: 1.5; /* Improves text readability */
 }
+.nav-menu {
+  display: flex;
+  gap: 15px;
+}
 
 .nav-menu a {
-  display: inline-block;
-  gap: 20px;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 10px;
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
-  border: 1px solid #fff;
+  margin-right: auto;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
-nav a:hover {
+.nav-menu a:hover {
   background-color: #fff;
   color: #000;
 }
-.product-list {
-  position: relative; /* To position the dropdown */
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
 }
-.product-list select {
-  font-size: 16px;
-  padding: 8px;
-  background-color: #222831;
-  color: white;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
+
+.dropdown-toggle {
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
   position: absolute;
-  top: 100%; /* Position below the 'دسته بندی ها' link */
-  left: 0;
+  top: 100%; /* Position below the main link */
+  right: 0;
+  background-color: #222831;
+  border-radius: 5%;
+  border: none;
+  overflow: hidden;
+  width: 100%;
   z-index: 1;
-  display: none; /* Hide the dropdown by default */
-  width: 180px;
-  font-family: IRANYekan, sans-serif;
 }
-.product-list:hover select {
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #393e46;
+}
+
+.dropdown:hover .dropdown-menu {
   display: block;
 }
-.product-list select option {
-  background-color: #222831;
-  color: white;
-  padding: 10px;
-}
 
-/* Ensure the rest of the links have the same spacing */
-.nav-menu a + a {
-  margin-left: 20px;
-}
-
+/* Footer Styling */
 footer {
   font-size: 14px;
   color: #ccc;
@@ -126,4 +148,20 @@ footer {
 .social-media {
   color: #fff;
   text-decoration: none;
+}
+.video-container {
+  width: 100%;
+  max-width: 800px; /* Set a max width to prevent the video from getting too large */
+  
+  overflow: hidden;
+  border-radius: 8px; /* Optional: rounded corners for the video */
+  margin-top: 20px;
+}
+
+.homepage-video {
+  width: 100%;
+ max-height: 70vh; */
+  height: auto;
+  display: block;
+  border-radius: inherit; /* Inherits the border-radius from .video-container */
 }
