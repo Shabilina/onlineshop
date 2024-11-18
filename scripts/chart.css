@@ -1,0 +1,38 @@
+.columns {
+    display: grid;
+    height: 400px;
+    max-width: 350px; /* Adjust the width for a better chart */
+
+    border: 1px solid black; /* Fixed invalid color value */
+    margin: 20px auto; /* Center the chart */
+  }
+  
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack the bars vertically */
+    justify-content: flex-start; /* Align items to the bottom */
+
+  }
+  
+  .dish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text visibility */
+    border-right: 1px solid white;
+    font-size: 12px; /* Adjust for readability */
+  }
+  
+  .pizza {
+    background: wheat;
+  }
+  
+  .pasta {
+    background: green;
+  }
+  .ghormesabzi {
+    background: chocolate;
+  }
+
+  

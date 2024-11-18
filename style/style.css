@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-/* body {
+body {
   font-family: "IRANYekan";
   background-color: #000;
   color: #fff;
@@ -30,7 +30,7 @@
   }
 } */
 
-/* header,
+header,
 main,
 footer {
   margin-bottom: 20px;
@@ -42,23 +42,23 @@ body {
   grid-template-rows: auto 1fr auto;
   font-family: "IRANYekan";
 }
-header {
+/* header {
   background-color: #000;
   align-items: center;
   padding: 1em 2em;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+} */
 
-/* header {
+ header {
   display: flex;
   align-items: center;
   font-weight: lighter;
   padding: 0 10px;
   box-sizing: border-box;
   direction: rtl;
-} */
+} 
 .icon-links {
   display: flex;
   align-items: center;
@@ -83,27 +83,27 @@ header {
   height: 30px;
 }
 
-/* main {
+ main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-} */
+} 
 
 .logo {
   width: 60px;
 
 }
 
-/* .hero-banner {
+.hero-banner {
   text-align: center;
   font-size: 15px;
   font-weight: lighter;
   color: #fff;
   border-radius: 8px;
   line-height: 1.5;
-} */
+} 
 .menu-toggle {
   display: none;
   background: none;
@@ -169,33 +169,33 @@ header {
   display: block;
 }
 
-/* footer {
+footer {
   font-size: 14px;
   color: #ccc;
   line-height: 1.6;
   text-align: center;
-} */
+} 
 
-/* .social-media {
+ .social-media {
   color: #fff;
   text-decoration: none;
-} */
-/* .video-container {
+} 
+.video-container {
   width: 100%;
   max-width: 800px;
 
   overflow: hidden;
   border-radius: 8px;
   margin-top: 20px;
-} */
+} 
 
-/* .homepage-video {
+.homepage-video {
   width: 100%;
   max-height: 70vh;
   height: auto;
   display: block;
-  border-radius: inherit;
-} */
+  border-radius: inherit;}
+
 .icon {
   padding: 8px;
   width: 20px;
