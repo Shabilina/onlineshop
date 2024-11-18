@@ -1,0 +1,36 @@
+/* Basic styles for the flex container */
+.flex-container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;                /* Enable Flexbox */
+    justify-content: space-evenly; /* Space items evenly across the main axis */         /* Center items along the cross axis (vertically) */
+    height: 200px;
+    background-color: #c41818;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 5;
+ 
+}
+
+.flex-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    flex-basis: 200px;
+
+}
+ 
+
+
+
+ .item14 {
+    flex-basis: 200px;
+    flex-shrink: 0.1;
+
+}
+
+.item8 {
+    flex-basis: 200px;
+} 
