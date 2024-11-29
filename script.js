@@ -1,15 +1,31 @@
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
+
 hamburger.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('menu-open', isOpen);
-  document.body.classList.toggle('no-scroll', isOpen);
+  hamburger.classList.toggle('menu-open');
+  hamburger.setAttribute('aria-expanded', isOpen);
 });
 
-document.addEventListener('click', (event) => {
-  if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
-    mobileMenu.classList.remove('open');
-    document.body.classList.remove('no-scroll');
-    hamburger.setAttribute('aria-expanded', false);
-  }
+
+
+const slides = document.querySelectorAll('.slide');
+let index = 0;
+
+const showSlide = (n) => {
+  slides.forEach((slide) => {
+    slide.style.opacity = '0';
+  });
+  slides[n].style.opacity = '1';
+};
+
+const nextSlide = () => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+};
+
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(index);
 });

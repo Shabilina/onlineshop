@@ -9,8 +9,13 @@ body {
   background-color: #000;
   padding: 0;
   direction: rtl;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh
 }
-
+* {
+  box-sizing: border-box;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -86,15 +91,16 @@ nav a {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background: #838282;
+  background: #050505;
   padding: 20px;
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
-  height: 100vh;
+  width: 90%;
+  height: 85vh;
   z-index: 1000;
   overflow-y: auto;
+  transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 }
 .mobile-menu.open {
@@ -122,46 +128,91 @@ nav a {
 .hamburger.menu-open span {
   background: white;
 }
+.registrationform {
+  margin-left: auto;
+  margin-right: 10px;
+}
+footer .social-media {
+  text-decoration: underline;
+  color: white;
+  text-align: center;
+}
+.footer {
+  background-color: #000;
+  color: white;
+  position: relative;
+  margin-top: auto
+}
+.main {
+  width: 100%;
+  /* height: 100vh; */
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin-top: 10px;
+}
+
+.slide img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .navbar {
     display: none;
+    width: 90%;
+    margin: 0 auto;
   }
-  .searchBox {
-    margin-top: 7px;
-    width: 70%;
-    margin-right: 5px;
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  .logo {
+    width: 50px;
+    height: auto;
+    order: 2;
+    margin-left: 10px;
   }
   .hamburger {
     display: flex;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: 10px;
+    margin: 0;
     z-index: 1100;
     position: relative;
     color: white;
+    order: 1;
+    margin-left: 10px;
   }
-
   .mobile-menu {
-    display: none;
-  }
-
-  .mobile-menu.open {
-    display: none;
+    width: calc(100% - 20px);
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     flex-direction: column;
-    gap: 20px;
-    background: black;
+    background: #393838;
     padding: 20px;
-    margin-top: 70px;
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
+    border-radius: 10px;
+    top: 70px;
+    right: 0px;
     z-index: 1000;
     overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
   }
   .mobile-menu.open {
     display: flex;
+    transform: translateX(0);
   }
   .mobile-menu ul {
     display: flex;
@@ -179,21 +230,10 @@ nav a {
     font-weight: bold;
     text-align: center;
   }
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px;
-    gap: 10px;
-  }
-
-  .logo {
-    align-self: center;
-    margin: 0;
-    width: 70px;
-  }
-
-  .registrationform {
-    margin-left: 310px;
+  .searchBox {
+    margin-top: 5px;
+    width: 70%;
+    margin-right: 5px;
   }
   .searchButton {
     background-color: white;
@@ -201,5 +241,23 @@ nav a {
     margin-top: 8px;
   }
   .hamburger.menu-open span {
-    background: white;
-}}
+    background: black;
+  }
+  .registrationform {
+    margin-top: 5px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 500;
+  }
+  body {
+    margin-bottom: 70px;
+  }
+}

@@ -30,22 +30,24 @@
             <input type="submit" value="جستجو" class="searchButton" />
           </div>
           <a href="#registrationform" class="registrationform">ورود/ عضویت</a>
-          <img src="icons/blackicon.png" class="cart-icons" />
+          <img src="icons/blackicon.png" class="cart-icons" alt="carticon" />
         </div>
       </nav>
 
       <!-- Hamburger Menu Icon for Mobile -->
       <div
-      class="hamburger"
-      role="button"
-      aria-label="Toggle navigation"
-      tabindex="0"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </div>
-     
+        class="hamburger"
+        role="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        tabindex="0"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </div>
+
       <!-- Mobile Menu -->
       <div class="mobile-menu">
         <div class="searchBox">
@@ -58,8 +60,7 @@
           <input type="submit" value="جستجو" class="searchButton" />
         </div>
         <a href="#registrationform" class="registrationform">ورود/ عضویت</a>
-       
-        
+
         <ul>
           <li><a href="index.html">شلوار</a></li>
           <li><a href="index.html">پیراهن</a></li>
@@ -68,11 +69,27 @@
         </ul>
       </div>
     </header>
-
-    <main>
-      <section id="home">Welcome to My Website</section>
+    <main class="slides">
+      <div class="slide">
+        <img src="Videos/photo_2024-11-28_17-30-03.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="Videos/photo_2024-11-28_17-30-10.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide">
+        <img src="Videos/photo_2024-11-28_17-30-15.jpg" alt="Slide 3" />
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div>
+        <a
+          href="https://www.instagram.com/amstaff_mahdavi?igsh=MXZneGdxcTVsZ2Z5cg=="
+          class="social-media"
+          target="_blank"
+          >ما را در اینستاگرام دنبال کنید!</a
+        >
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
