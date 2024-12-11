@@ -1,31 +1,27 @@
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const dropdownLinks = document.querySelectorAll(".mobile-menu .dropdown > a");
 
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('menu-open');
-  hamburger.setAttribute('aria-expanded', isOpen);
-});
-
-
-
-const slides = document.querySelectorAll('.slide');
-let index = 0;
-
-const showSlide = (n) => {
-  slides.forEach((slide) => {
-    slide.style.opacity = '0';
+  // Toggle hamburger menu
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    hamburger.setAttribute(
+      "aria-expanded",
+      mobileMenu.classList.contains("open")
+    );
   });
-  slides[n].style.opacity = '1';
-};
 
-const nextSlide = () => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-};
+  // Handle dropdown menu toggle in mobile
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      const parentDropdown = link.parentElement;
+      const submenu = parentDropdown.querySelector(".dropdown-menu");
 
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-document.addEventListener('DOMContentLoaded', () => {
-  showSlide(index);
+      if (submenu) {
+        submenu.classList.toggle("open");
+      }
+    });
+  });
 });
